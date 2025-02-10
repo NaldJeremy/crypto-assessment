@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+:root {
+  font-family: "Roboto", sans-serif;
+  color-scheme: dark;
+  color: rgba(255, 255, 255, 0.95);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.8),
+    rgba(13, 5, 86, 0.9)
+  );
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  align-items: center;
+}
+
+/* Navbar Styling */
+nav {
+  background-color: #000000; /* Solid black navbar */
+  padding: 1rem 2rem;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 50;
+}
+
+/* Tabs Navigation */
+.tabs {
+  display: flex;
+  justify-content: flex-start;
+  gap: 24px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.tabs span {
+  cursor: pointer;
+  padding-bottom: 5px;
+  color: #b0b0b0;
+  transition: all 0.3s ease;
+  position: relative;
+  font-weight: 500;
+}
+
+.tabs span.active {
+  color: #f89b29; /* Adjusted orange color */
+  font-weight: 600;
+}
+
+.tabs span.active::after {
+  content: "";
+  width: 60%;
+  height: 3px;
+  background-color: #f89b29; /* Matching underline */
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 4px;
+}
+
+/* Adjust inactive tab styles */
+.tabs span:not(.active):hover {
+  color: #d3d3d3; /* Slight lightening on hover */
+}
+
+/* Market Table */
+.market-table {
+  width: 100%;
+  margin-top: 80px;
+  padding: 20px;
+  border-radius: 12px;
+  color: white;
+  overflow-x: auto; /* Enables scrolling */
+}
+
+.market-table h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.market-table table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  min-width: 800px; /* Prevent table from squishing */
+}
+
+.market-table thead {
+  background: transparent;
+}
+
+.market-table th {
+  text-align: right;
+  padding: 12px 16px;
+  font-weight: 600;
+  color: #b0b0b0;
+  font-size: 14px;
+}
+
+.market-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.market-table tr:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.market-table .positive {
+  color: #00ff00;
+}
+
+.market-table .negative {
+  color: #ff4d4d;
+}
+
+/* Favorite Icon */
+.favorite-icon {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.market-table tbody tr td:first-child {
+  display: flex;
+  align-items: center;
+}
+
+.market-table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.table-data {
+  text-align: right;
+}
+
+/* Responsive Table */
+@media (max-width: 1024px) {
+  .market-table {
+    overflow-x: auto;
+  }
+
+  .market-table table {
+    font-size: 12px;
+    min-width: 100%;
+  }
+
+  .market-table th,
+  .market-table td {
+    padding: 10px;
+  }
+}
+
+/* Favorite button adjustments */
+.market-table td img {
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.market-table td img:hover {
+  transform: scale(1.1);
+}
