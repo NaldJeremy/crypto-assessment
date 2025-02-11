@@ -164,7 +164,7 @@ export default {
       markets: [
         {
           pair: "BTC/DAI",
-          lastPrice: "98,832.93",
+          lastPrice: "98,832.93 / Rp 1,612,213,281.72",
           change24h: +3.89,
           highLow24h: "102,451.34 / Rp 94,288.07",
           marketCap: "Rp 31,953.008T",
@@ -173,7 +173,7 @@ export default {
         },
         {
           pair: "ETH/DAI",
-          lastPrice: "98,832.93",
+          lastPrice: "98,832.93 / Rp 1,612,213,281.72",
           change24h: +3.89,
           highLow24h: "102,451.34 / Rp 94,288.07",
           marketCap: "Rp 31,953.008T",
@@ -182,7 +182,7 @@ export default {
         },
         {
           pair: "XRP/ETH",
-          lastPrice: "98,832.93",
+          lastPrice: "98,832.93 / Rp 1,612,213,281.72",
           change24h: -3.89,
           highLow24h: "102,451.34 / Rp 94,288.07",
           marketCap: "Rp 31,953.008T",
@@ -191,7 +191,7 @@ export default {
         },
         {
           pair: "BTC/DAI",
-          lastPrice: "98,832.93",
+          lastPrice: "98,832.93 / Rp 1,612,213,281.72",
           change24h: +3.89,
           highLow24h: "102,451.34 / Rp 94,288.07",
           marketCap: "Rp 31,953.008T",
@@ -200,7 +200,7 @@ export default {
         },
         {
           pair: "BTC/DAI",
-          lastPrice: "98,832.93",
+          lastPrice: "98,832.93 / Rp 1,612,213,281.72",
           change24h: +3.89,
           highLow24h: "102,451.34 / Rp 94,288.07",
           marketCap: "Rp 31,953.008T",
