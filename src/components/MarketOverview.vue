@@ -42,7 +42,7 @@ export default {
         {
           name: "TKO/IDR",
           price: "5,261.3",
-          change: 7.82,
+          change: 3.82,
           volume: "2,258",
           trend: [10, 8, 6, 7, 5],
         },
@@ -51,21 +51,21 @@ export default {
           price: "5,261.3",
           change: -3.82,
           volume: "2,258",
-          trend: [10, 11, 12, 10, 9],
+          trend: [10, 8, 6, 7, 5],
         },
         {
           name: "TKO/IDR",
           price: "5,261.3",
           change: 3.82,
           volume: "2,258",
-          trend: [5, 7, 8, 9, 10],
+          trend: [10, 8, 6, 7, 5],
         },
         {
           name: "IDN/IDR",
           price: "5,261.3",
-          change: 5.82,
-          volume: "8,258",
-          trend: [15, 12, 10, 8, 6],
+          change: -3.82,
+          volume: "2,258",
+          trend: [10, 8, 6, 7, 5],
         },
       ],
     };
@@ -133,7 +133,7 @@ export default {
 .market-card {
   background: rgba(20, 20, 20, 0.95);
   border-radius: 12px;
-  padding: 1.5rem;
+  padding: 16px;
   width: 260px;
   height: 130px;
   display: flex;
@@ -170,7 +170,7 @@ export default {
 
 /* Graph Styling */
 .market-graph .chart {
-  width: 100%;
+  width: 80%;
   height: 100%;
 }
 /* Market Volume */
@@ -185,6 +185,16 @@ export default {
   .cards-container {
     flex-wrap: nowrap;
     justify-content: space-between;
+  }
+  .market-graph .chart {
+    width: 60%;
+    height: 100%;
+  }
+}
+
+@media (min-width: 425px) {
+  .market-card {
+    width: 29rem;
   }
 }
 </style>
