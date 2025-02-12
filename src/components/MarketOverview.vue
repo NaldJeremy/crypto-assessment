@@ -14,11 +14,11 @@
           <h3 class="market-name">{{ market.name }}</h3>
           <p class="market-price">Rp {{ market.price }}</p>
           <p :class="market.change > 0 ? 'change-positive' : 'change-negative'">
-            {{ market.change }}%
+            {{ market.change > 0 ? "+" + market.change : market.change }}%
           </p>
         </div>
         <div class="market-graph">
-          <div>
+          <div class="chart">
             <canvas :id="'chart-' + index" class="chart"></canvas>
           </div>
           <div>
@@ -168,10 +168,13 @@ export default {
   color: #ef4444;
 }
 
-/* Graph Styling */
 .market-graph .chart {
-  width: 80%;
-  height: 100%;
+  width: 99% !important; /* Ensure it takes full width */
+  height: 80px !important; /* Adjust height */
+}
+
+.chart {
+  gap: 2rem;
 }
 /* Market Volume */
 .market-volume {
@@ -180,15 +183,42 @@ export default {
   text-align: right;
 }
 
-/* Ensure 4 Cards in a Row on Large Screens */
 @media (min-width: 1024px) {
   .cards-container {
-    flex-wrap: nowrap;
-    justify-content: space-between;
+    display: flex;
+    flex-wrap: nowrap; /* Prevents wrapping */
+    justify-content: space-between; /* Even spacing */
+    gap: 20px; /* Adds spacing between cards */
   }
+
+  .market-card {
+    width: 22%; /* Ensures four cards fit in one row */
+    min-width: 230px;
+    max-width: 260px;
+    height: 140px; /* Adjust card height */
+  }
+
+  .market-graph {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem; /* Adds spacing between graph and volume text */
+  }
+
   .market-graph .chart {
-    width: 60%;
-    height: 100%;
+    width: 99% !important;
+    height: 60px !important; /* Ensures smaller chart */
+  }
+
+  .market-volume {
+    font-size: 0.8rem;
+    color: #949494;
+    text-align: center;
+  }
+
+  /* Adjustments for better UI on large screens */
+  .market-details {
+    padding-bottom: 5px; /* Adds space between price and graph */
   }
 }
 
